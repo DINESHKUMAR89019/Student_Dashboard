@@ -27,6 +27,7 @@ export async function POST(req) {
             role: user.role,
         }, { status: 201 });
     } catch (err) {
+        console.error("Register error:", err);
         return NextResponse.json({ error: err.message }, { status: 500 });
     }
 }

@@ -77,7 +77,7 @@ export default function AuthPage() {
 
                 {error && <div className="auth-error">{error}</div>}
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} suppressHydrationWarning>
                     {!isLogin && (
                         <div className="form-group">
                             <label className="label">Full Name</label>

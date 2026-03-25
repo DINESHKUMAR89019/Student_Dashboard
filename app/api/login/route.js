@@ -29,6 +29,7 @@ export async function POST(req) {
             role: user.role,
         });
     } catch (err) {
+        console.error("Login error:", err);
         return NextResponse.json({ error: err.message }, { status: 500 });
     }
 }
