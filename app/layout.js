@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-    title: "Student Learning Tracker",
-    description: "Track student performance, courses, and grades in real time.",
+    title: "LearnTrack — Advanced Student Dashboard",
+    description: "Comprehensive student learning dashboard with grades, attendance, projects, certifications, skills, and more.",
 };
 
 export default function RootLayout({ children }) {
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head>
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
                     rel="stylesheet"
                 />
             </head>
