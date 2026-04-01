@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function StudentDashboard() {
     const router = useRouter();
@@ -351,6 +352,7 @@ export default function StudentDashboard() {
                         <p className="page-subtitle">Welcome back, {user.name}!</p>
                     </div>
                     <div className="header-actions">
+                        <ThemeToggle />
                         <div className="rank-badge">
                             <span className="rank-label">Rank</span>
                             <span className="rank-value">#{myRank}</span>

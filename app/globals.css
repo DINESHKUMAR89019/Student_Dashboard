@@ -4,7 +4,7 @@
    DESIGN TOKENS
    ═══════════════════════════════════════════════════ */
 :root {
-  --bg-primary: #060a14;
+  --bg-primary: #ffffff;
   --bg-secondary: #0c1222;
   --bg-card: #111a2e;
   --bg-card-hover: #162040;
@@ -37,6 +37,25 @@
   --sidebar-width: 260px;
   --radius: 0.85rem;
   --radius-lg: 1.25rem;
+}
+
+/* Light Mode */
+html.light-mode {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f4f8;
+  --bg-input: #f0f4f8;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --border: #e2e8f0;
+  --border-focus: #3b82f6;
+  --border-glow: rgba(59, 130, 246, 0.15);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-glow: rgba(59, 130, 246, 0.1);
 }
 
 /* ═══ RESET ═══ */
@@ -226,6 +245,12 @@ body {
   color: var(--text-muted);
   font-size: 0.88rem;
   margin-top: 0.25rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .rank-badge {
@@ -722,4 +747,51 @@ tr.highlight-row td { background: rgba(59, 130, 246, 0.08); }
   .main-content { padding: 1rem 0.75rem 2rem; }
   .hero-stat { padding: 0.85rem; }
   .hero-stat-value { font-size: 1.15rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   THEME TOGGLE
+   ═══════════════════════════════════════════════════ */
+.theme-toggle-btn {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  gap: 4px;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.theme-toggle-icon {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-icon.active {
+  color: var(--accent);
+}
+
+.theme-toggle-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 3px;
 }

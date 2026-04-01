@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function TeacherDashboard() {
     const router = useRouter();
@@ -220,6 +221,9 @@ export default function TeacherDashboard() {
                             {sections.find(s => s.id === activeSection)?.label}
                         </h1>
                         <p className="page-subtitle">Manage student records and academics</p>
+                    </div>
+                    <div className="header-actions">
+                        <ThemeToggle />
                     </div>
                 </div>
 
