@@ -103,9 +103,7 @@ export default function AdminDashboard() {
     }
 
     const tabs = [
-        { id: "overview", label: "Overview", icon: "📊" },
-        { id: "users", label: "User Management", icon: "👥" },
-        { id: "system", label: "System", icon: "⚙️" },
+        { id: "users", label: "User Management", icon: "👥" },    
     ];
 
     const roleColor = { student: "badge-purple", teacher: "badge-success", admin: "badge-danger" };
